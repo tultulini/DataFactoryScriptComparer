@@ -1,5 +1,6 @@
 # DataFactoryScriptComparer
 Compares the script property of DF pipeline in a comparing tool (Beyond Compar, vs code...)
+### *Warning!!!* - the UI is just totally ugly!!!
 
 
 ## TODO
