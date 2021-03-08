@@ -39,7 +39,8 @@
                     VerticalScrollBarVisibility="Visible"
                     MaxLines="10000"></TextBox>
 
-                    <Button  Margin="10" Height="32px" Click="Button_Click">Copmare</Button>
+                    <Button  Margin="10" Height="32px" Click="Button_Click">Copmare Script</Button>
+                    <Button  Margin="10" Height="32px" Click="ComparJsonButton_Click">Copmare JSON</Button>
                 </StackPanel>
             </TabItem>
 

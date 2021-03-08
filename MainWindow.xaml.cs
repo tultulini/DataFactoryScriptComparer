@@ -46,6 +46,34 @@ namespace DataFactoryScriptComparer
 
             CompareFiles(f1, f2);
         }
+        private void ComparJsonButton_Click(object sender, RoutedEventArgs e)
+        {
+            var json1 = OrderJson.Parse(Source.Text);
+            var json2 = OrderJson.Parse(Target.Text);
+
+            string path = Directory.GetCurrentDirectory();
+            var now = DateTime.Now.ToString("yyyy-MM-ddTHH-mm-ss");
+
+            var f1 = Path.Combine(path, $"{now}-Source.txt");
+            var f2 = Path.Combine(path, $"{now}-Target.txt");
+
+
+            try
+            {
+                File.WriteAllText(f1, json1);
+                File.WriteAllText(f2, json2);
+
+            }
+            catch (Exception exception)
+            {
+
+                Console.WriteLine($"Error: {exception}");
+                return;
+            }
+
+            CompareFiles(f1, f2);
+        }
+
 
         private string ExtractScript(string data)
         {
